@@ -1,3 +1,270 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+* {
+  box-sizing: border-box; }
 
+body {
+  background-color: #00B8D4;
+  line-height: normal;
+  font-size: 16px;
+  overflow-Y: scroll;
+  font-family: "Roboto Condensed", "Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased !important; }
+
+a, a:hover, a:visited, a:link, a:active {
+  text-decoration: none; }
+
+a:active {
+  color: #fff !important; }
+
+.sm-img {
+  width: 30px !important;
+  height: 30px !important; }
+
+.rad-navigation {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+  background: white;
+  z-index: 10000;
+  text-align: center;
+  padding: 10px; }
+  .rad-navigation ul {
+    margin-bottom: 0; }
+
+.rad-logo-hidden {
+  line-height: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 22px;
+  text-decoration: none;
+  color: #222533;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  transition: all 0.2s ease-in-out; }
+
+.links {
+  margin-right: 10px;
+  position: relative; }
+  .links li {
+    list-style: none;
+    position: relative;
+    margin: 10px;
+    display: inline-block; }
+
+.rad-dropmenu-item.active {
+  display: block;
+  -webkit-animation: flipInX 1s ease; }
+
+.lg-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333; }
+
+.md-text {
+  font-size: 12px;
+  color: #c6c6c6; }
+
+.sm-text {
+  font-size: 11px;
+  color: #c6c6c6; }
+
+.rad-notification-item {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #EEEEEE; }
+  .rad-notification-item:hover {
+    background-color: #F5F5F5; }
+  .rad-notification-item .rad-notification-content {
+    color: #404040; }
+
+.rad-notification-body {
+  color: black;
+  vertical-align: middle;
+  margin-left: 30px; }
+
+.rad-logo-container {
+  width: 225px;
+  text-align: center;
+  height: 50px;
+  float: left;
+  transition: all 0.2s ease-in-out; }
+
+.rad-top-nav-container {
+  float: right;
+  transition: all 0.2s ease-in-out; }
+
+.rad-toggle-btn,
+.rad-logo {
+  text-decoration: none;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #222533;
+  display: inline-block; }
+
+.rad-logo i {
+  padding-top: 2px;
+  vertical-align: middle;
+  margin-right: 10px; }
+
+.rad-toggle-btn:hover {
+  background: #f9f9f9; }
+
+.rad-menu-item {
+  position: relative;
+  padding: 0 5px;
+  line-height: 30px;
+  height: 30px;
+  color: #89949B;
+  z-index: 5;
+  display: inline-block; }
+
+.sm-menu {
+  min-width: 150px !important; }
+  .sm-menu > li {
+    padding: 10px;
+    text-align: left; }
+    .sm-menu > li i {
+      margin: 0 10px 0 0; }
+    .sm-menu > li > a {
+      padding: 10px; }
+
+.rad-dropmenu-item {
+  position: absolute;
+  right: -6px;
+  top: 45px;
+  min-width: 250px;
+  background-color: white;
+  border: 1px solid #BDBDBD;
+  border-top: 5px solid #515d6e;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  display: none; }
+  .rad-dropmenu-item:before {
+    content: "";
+    position: absolute;
+    border-width: 0px 10px 10px 10px;
+    border-style: solid;
+    border-color: #515d6e transparent;
+    top: -14px;
+    right: 8px; }
+
+.rad-dropmenu-item.rad-settings {
+  right: 0 !important;
+  left: auto !important; }
+  .rad-dropmenu-item.rad-settings:before {
+    right: 5px !important;
+    left: auto !important; }
+  .rad-dropmenu-item.rad-settings > .rad-notification-item:hover {
+    background: #fff !important; }
+  .rad-dropmenu-item.rad-settings > .rad-notification-item i {
+    font-size: 24px; }
+
+.rad-chk-pin {
+  margin: 0 !important; }
+  .rad-chk-pin span {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background: crimson;
+    border: 1px solid #f6f6f6; }
+    .rad-chk-pin span:after {
+      content: "";
+      position: absolute;
+      background: white;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      top: -1px;
+      left: 0px;
+      box-shadow: 0 0 0.5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+  .rad-chk-pin input {
+    display: none; }
+    .rad-chk-pin input:checked + span {
+      background: #23AE89; }
+      .rad-chk-pin input:checked + span:after {
+        left: 19px; }
+
+.hide {
+  display: none; }
+
+.rad-option-selected {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: all .2s linear; }
+
+.rad-color-swatch {
+  display: table;
+  width: 90px;
+  height: 25px;
+  border-radius: 4px; }
+  .rad-color-swatch .colors {
+    width: 25px;
+    height: 25px;
+    display: table-cell;
+    cursor: pointer; }
+    .rad-color-swatch .colors input[type="radio"] {
+      display: none; }
+  .rad-color-swatch .colors:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  .rad-color-swatch .colors:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+
+.rad-logo-container.rad-nav-min {
+  transform: translate3d(-180px, 0, 0); }
+  .rad-logo-container.rad-nav-min .rad-logo {
+    opacity: 0; }
+  .rad-logo-container.rad-nav-min + .rad-logo-hidden {
+    opacity: 1;
+    visibility: visible; }
+
+.rad-bg-crimson {
+  background: crimson; }
+
+.rad-bg-teal {
+  background: #1fb5ad; }
+
+.rad-bg-purple {
+  background: rebeccapurple; }
+
+.rad-bg-orange {
+  background: #ff503f; }
+
+.rad-bg-twitter {
+  background: #55acee; }
+
+.brand-icon {
+  font-size: 22px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  width: 50px;
+  background-color: crimson;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  margin-left: -230px;
+  display: none; }
+
+.rad-list-img {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px; }
 
 /*# sourceMappingURL=style.css.map */
