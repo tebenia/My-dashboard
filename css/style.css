@@ -29,7 +29,8 @@ a:active {
   background: white;
   z-index: 10000;
   text-align: center;
-  padding: 10px; }
+  padding: 10px;
+  font-family: "Roboto Condensed"; }
   .rad-navigation ul {
     margin-bottom: 0; }
 
@@ -49,7 +50,7 @@ a:active {
 .links {
   margin-right: 10px;
   position: relative; }
-  .links li {
+  .links > li {
     list-style: none;
     position: relative;
     margin: 10px;
@@ -127,6 +128,22 @@ a:active {
   z-index: 5;
   display: inline-block; }
 
+.rad-menu-badge {
+  position: absolute;
+  min-width: 20px;
+  min-height: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 100%;
+  font-size: 12px;
+  background: #E94B3B;
+  box-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  text-align: center;
+  top: -10px;
+  z-index: 1; }
+
 .sm-menu {
   min-width: 150px !important; }
   .sm-menu > li {
@@ -146,8 +163,7 @@ a:active {
   border: 1px solid #BDBDBD;
   border-top: 5px solid #515d6e;
   border-radius: 2px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  display: none; }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
   .rad-dropmenu-item:before {
     content: "";
     position: absolute;
@@ -156,6 +172,27 @@ a:active {
     border-color: #515d6e transparent;
     top: -14px;
     right: 8px; }
+
+.rad-dropmenu-footer,
+.rad-dropmenu-header {
+  display: block !important;
+  background: #CFD8DC;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 !important;
+  padding: 6px;
+  text-align: center; }
+  .rad-dropmenu-footer > a,
+  .rad-dropmenu-header > a {
+    color: white;
+    line-height: 12px;
+    text-decoration: none; }
+
+.rad-dropmenu-header {
+  border-bottom: 1px solid #CFD8DC; }
+
+.rad-dropmenu-footer {
+  border-top: 1px solid #CFD8DC; }
 
 .rad-dropmenu-item.rad-settings {
   right: 0 !important;
@@ -224,13 +261,98 @@ a:active {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px; }
 
-.rad-logo-container.rad-nav-min {
-  transform: translate3d(-180px, 0, 0); }
-  .rad-logo-container.rad-nav-min .rad-logo {
-    opacity: 0; }
-  .rad-logo-container.rad-nav-min + .rad-logo-hidden {
-    opacity: 1;
-    visibility: visible; }
+.rad-logo-container.rad-nav-min .rad-logo {
+  opacity: 0; }
+.rad-logo-container.rad-nav-min + .rad-logo-hidden {
+  opacity: 1;
+  visibility: visible; }
+
+.rad-sidebar {
+  z-index: 9999;
+  position: fixed;
+  font-weight: 600;
+  background-color: white !important;
+  width: 225px;
+  height: 100vh;
+  top: 70px;
+  left: 0px;
+  bottom: 0px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
+  transition: all 0.2s ease-in-out; }
+  .rad-sidebar li {
+    text-align: left;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    line-height: 1.5; }
+    .rad-sidebar li a {
+      text-decoration: line-through;
+      display: block;
+      color: #515d6e; }
+      .rad-sidebar li a i {
+        position: relative;
+        width: 45px;
+        line-height: 45px;
+        text-align: center; }
+        .rad-sidebar li a i:before {
+          z-index: 10;
+          position: relative; }
+      .rad-sidebar li a > span {
+        display: inline-block;
+        visibility: visible;
+        opacity: 1;
+        padding-left: 10px;
+        -webkit-transition: all .2s ease-in-out .2s;
+        transform: translate3d(0, 0, 0);
+        text-transform: uppercase;
+        font-size: 11px; }
+    .rad-sidebar li:hover {
+      background: #f2f2f2; }
+      .rad-sidebar li:hover .icon-bg {
+        transform: translate3d(0, 0, 0); }
+      .rad-sidebar li:hover a > i {
+        color: white; }
+
+.icon-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  transform: translate3d(-43px, 0, 0);
+  transition: all .2s ease-in-out; }
+
+.rad-txt-primary {
+  color: #1C7EBB; }
+
+.rad-bg-primary {
+  background: #1C7EBB; }
+
+.rad-txt-success {
+  color: #23AE89; }
+
+.rad-bg-success {
+  background: #23AE89; }
+
+.rad-txt-danger {
+  color: #E94B3B; }
+
+.rad-bg-danger {
+  background: #E94B3B; }
+
+.rad-txt-warning {
+  color: #F98E33; }
+
+.rad-bg-warning {
+  background: #F98E33; }
+
+.rad-txt-violet {
+  color: #6A55C2; }
+
+.rad-bg-violet {
+  background: #6A55C2; }
 
 .rad-bg-crimson {
   background: crimson; }
