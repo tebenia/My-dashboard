@@ -336,7 +336,7 @@ a:active {
   //transform: translate3d(-180px,0,0);
 
   .rad-logo {
-    opacity: 0;
+    opacity: 1;
   }
 
   &+.rad-logo-hidden {
@@ -367,7 +367,7 @@ a:active {
     line-height: 1.5;
 
     a {
-      text-decoration: line-through;
+      text-decoration: none;
       display: block;
       color: $text-color;
 
@@ -474,4 +474,65 @@ a:active {
   border-radius: 100%;
   width: 32px;
   height: 32px;
+}
+
+.rad-body-wrapper {
+  position: absolute;
+  left: 230px;
+  top: 75px;
+  width: auto;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.rad-info-box {
+  margin-bottom: 16px;
+  box-shadow: 1px 1px 2px 0 #CCCCCC;
+  padding: 20px;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+  background: $base-color !important;
+
+  i {
+    display: block;
+    background-clip: padding-box;
+    margin-right: 15px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 4.4em;
+    position: absolute;
+  }
+
+  .value, .heading {
+    display: block;
+    position: relative;
+    color: $text-color;
+    text-align: right;
+    z-index: 10;
+  }
+
+  .heading {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .value {
+    font-size: 2.1em;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+}
+
+.rad-page-title {
+  margin-bottom: 20px;
+  text-shadow: 1px 4px 6px #c6c6c6, 0 0 0 #000, 1px 4px 6px #c6c6c6;
+
+  span {
+    font-size: 22px;
+    font-weight: 500;
+    display: block;
+  }
 }
